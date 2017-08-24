@@ -22,7 +22,8 @@
 
 % 1. Set the url of the matlab documentation to a variable called helpURL
 
-
+url = 'https://www.mathworks.com/help/matlab/';
+helpURL = web(url);
 
 % 2. What does the command 'clear all' do?
 %
@@ -85,7 +86,7 @@ figure;plot(x,y) %<- command goes here
 % any of the values in A.
 
 A = [1 2 3 2 1 NaN 1 2 3 NaN];
-S = nansum(A);
+S = nansum(A)
 
 
 % 11. I used to love playing the game minesweeper. Is there a way that I
@@ -116,8 +117,8 @@ xpbombs
 
 %%% Enter the code for your program below this line
 
-
-
+hw = 'Hello World\n';
+fprintf(hw)
 
 
 %%%%% When you have completed everything, type the following two commands

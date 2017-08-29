@@ -124,5 +124,5 @@ fprintf(hw)
 %%%%% When you have completed everything, type the following two commands
 %%%%% (without comments) into your command window. 
 
-%%% load handel
-%%% sound(y, Fs)
+load handel
+sound(y, Fs)

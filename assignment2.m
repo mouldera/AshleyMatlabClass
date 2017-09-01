@@ -77,7 +77,8 @@ linspace(-5,-1,5)
 %6.)
 [-1:.5:1]'
 %7.)
-
+v = [2, 7, 4, 3, 9, 10, 6, 3, 2]
+odds = v(rem(v,2) == 1) +3
 %8.)
 mat = [7:10; 12:-2:6]
 %9.)
@@ -95,6 +96,43 @@ sum = 3+5+7+9+11
 num = [3:2:9]
 den = [1:4]
 %30.)
-
+matrix = [10, 7, 3, -5, -2]
+matrix-3
+matrix(matrix > 0)
+abs(matrix)
+max(matrix)
 %31.)
+newmatrix = [1:3; 3:5; 1, 9, 5; 8:10; 10, 8, 4]
+max(newmatrix)
+max(newmatrix')
+max(max(newmatrix))
+
+
+%Chapter 3 Exercises
+
+%1.)
+ro = 7; %the outer radius of the sphere
+ri = 2; %the inner radius of the sphere
+sphere = ((4*pi)/3)*((ro^3)-(ri^3)) %the volume of the sphere
+%4.)
+vec = input('enter vector:');
+mat = [input('enter vector 1:'); input('enter vector 2:'); input('enter vector 3:')];
+%6.)
+fprintf 12345.6789\n;
+fprintf ('The number is %10.4d\n', 12345.6789);
+fprintf ('The number is %10.2d\n', 12345.6789);
+fprintf ('The number is %6.4d\n', 12345.6789);
+fprintf ('The number is %2.4d\n', 12345.6789);
+%8.)
+flowrate = input('Enter the flow in m^3/s:')
+feetpersec= flowrate/0.028;
+fprintf('a flow rate of %.3d meters per second\n', flowrate)
+fprintf('is equivalent to %.3d feet per sec\n', feetpersec)
+
+%13.)
+speedx =input('Enter speed in the x direction:');
+speedy =input('Enter speed in the y direction:');
+speedz =input('Enter speed in the z direction:');
+speedvector = [speedx, speedy, speedz]
+unitvector = ((speedvector)/(sqrt(speedx^2)+(speedy^2)+(speedz^2)))
 

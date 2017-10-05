@@ -37,7 +37,7 @@ if isempty(row1) %If the row is left empty
     row1 = input('row?'); %Prompts player to try again
     col1 = input('column?');
     tictactoe(row1, col1) = 2;
-    if isempty(row1) || isempty(col1) || tictactoe(row1,col1) == 2 || tictactoe(row1,col1) == 1 || (row1 > 3) || (row1 < 1) || (col1 > 3) || (col1 < 1)
+    if isempty(row1) || isempty(col1)|| tictactoe(row1,col1) == 2 || tictactoe(row1,col1) == 1 || (row1 > 3) || (row1 < 1) || (col1 > 3) || (col1 < 1)
         fprintf(2, 'Stop that nonsense. If you cannot play right, we will not play at all.\n GOTTA BAIL, SLIMY SNAIL')
         pause(4)
         quit %If the player makes the same mistake or a similar mistake, matlab will quit the game.
@@ -49,7 +49,7 @@ elseif  isempty(col1) %If the column is left empty
     row1 = input('row?');
     col1 = input('column?');
     tictactoe(row1, col1) = 2;
-    if isempty(row1) || isempty(col1) || tictactoe(row1,col1) == 2 || tictactoe(row1,col1) == 1 || (row1 > 3) || (row1 < 1) || (col1 > 3) || (col1 < 1)
+    if isempty(row1) || isempty(col1)|| tictactoe(row1,col1) == 2 || tictactoe(row1,col1) == 1 || (row1 > 3) || (row1 < 1) || (col1 > 3) || (col1 < 1)
         fprintf(2, 'Stop that nonsense. If you cannot play right, we will not play at all.\n GOTTA BAIL, SLIMY SNAIL')
         pause(4)
         quit
@@ -60,7 +60,7 @@ elseif (row1 > 3) || (row1 < 1) %If the row entered is outside of the matrix
     fprintf(2, 'That is not a valid entry, the rules were pretty specific, pick a row 1, 2, or 3 and then pick a column 1, 2, or 3. Please try again. \n')
     row1 = input('row?');
     col1 = input('column?');
-    if isempty(row1) || isempty(col1) || tictactoe(row1,col1) == 2 || tictactoe(row1,col1) == 1 || (row1 > 3) || (row1 < 1) || (col1 > 3) || (col1 < 1)
+    if isempty(row1) || isempty(col1)|| tictactoe(row1,col1) == 2 || tictactoe(row1,col1) == 1 || (row1 > 3) || (row1 < 1) || (col1 > 3) || (col1 < 1)
         fprintf(2, 'Obviously you are so scared that you have to resort to cheating.\n I have you know, I do not play with cheaters. \nI AM OUTTA HERE, REINDEER.\n')
         pause(4)
         quit
@@ -71,7 +71,7 @@ elseif (col1 > 3) || (col1 < 1) %If the column entered is outside of the matrix
     fprintf(2, 'That is not a valid entry, the rules were pretty specific, pick a row 1, 2, or 3 and then pick a column 1, 2, or 3. Please try again. \n')
     row1 = input('row?');
     col1 = input('column?');
-    if isempty(row1) || isempty(col1) || tictactoe(row1,col1) == 2 || tictactoe(row1,col1) == 1 || (row1 > 3) || (row1 < 1) || (col1 > 3) || (col1 < 1)
+    if isempty(row1) || isempty(col1)|| tictactoe(row1,col1) == 2 || tictactoe(row1,col1) == 1 || (row1 > 3) || (row1 < 1) || (col1 > 3) || (col1 < 1)
         fprintf(2, 'Obviously you are so scared that you have to resort to cheating.\n I have you know, I do not play with cheaters. \nI AM OUTTA HERE, REINDEER.\n')
         pause(4)
         quit
@@ -97,9 +97,9 @@ end
 %to block it. If none of those are true, the computer will play in the
 %first open spot listed. This order remains the same for each computer turn
 %unless otherwise stated
-if((tictactoe(1,1) == 2) && (tictactoe(1,2) == 2) && (tictactoe(1,3) == 2)) || ((tictactoe(2,1) ==2) && (tictactoe(2,2) ==2) && (tictactoe(2,3) ==2)) || ((tictactoe(3,1)== 2) && (tictactoe(3,2)== 2) && (tictactoe(3,3)== 2)) || ((tictactoe(1,1)== 2) && (tictactoe(2,1)== 2) && (tictactoe(3,1)== 2)) || ((tictactoe(1,2)== 2) && (tictactoe(2,2)== 2) && (tictactoe(3,2)== 2)) || ((tictactoe(1,3) == 2) && (tictactoe(2,3)== 2) && (tictactoe(3,3)== 2)) || ((tictactoe(1,1) ==2) && (tictactoe(2,2) ==2) && (tictactoe(3,3)==2)) || ((tictactoe(1,3) ==2) && (tictactoe(2,2) ==2) && (tictactoe(3,1) ==2)) || ((tictactoe(1,1) == 1) && (tictactoe(1,2) == 1) && (tictactoe(1,3) == 1)) || ((tictactoe(2,1) ==1) && (tictactoe(2,2) ==1) && (tictactoe(2,3) ==1)) || ((tictactoe(3,1)== 1) && (tictactoe(3,2)== 1) && (tictactoe(3,3)== 1)) || ((tictactoe(1,1)== 1) && (tictactoe(2,1)== 1) && (tictactoe(3,1)== 1))|| ((tictactoe(1,2)== 1) && (tictactoe(2,2)== 1) && (tictactoe(3,2)== 1)) || ((tictactoe(1,3) == 1) && (tictactoe(2,3)== 1) && (tictactoe(3,3)== 1)) || ((tictactoe(1,1) ==1) && (tictactoe(2,2) ==1) && (tictactoe(3,3)==1)) || ((tictactoe(1,3) ==1) && (tictactoe(2,2) ==1) && (tictactoe(3,1) ==1))
+if((tictactoe(1,1) == 2)&& (tictactoe(1,2) == 2)&& (tictactoe(1,3) == 2)) || ((tictactoe(2,1) ==2) && (tictactoe(2,2) ==2) && (tictactoe(2,3) ==2)) || ((tictactoe(3,1)== 2) && (tictactoe(3,2)== 2)&& (tictactoe(3,3)== 2)) || ((tictactoe(1,1)== 2) && (tictactoe(2,1)== 2) && (tictactoe(3,1)== 2))|| ((tictactoe(1,2)== 2) && (tictactoe(2,2)== 2)&& (tictactoe(3,2)== 2)) || ((tictactoe(1,3) == 2) && (tictactoe(2,3)== 2) && (tictactoe(3,3)== 2)) || ((tictactoe(1,1) ==2) && (tictactoe(2,2) ==2) && (tictactoe(3,3)==2)) || ((tictactoe(1,3) ==2) && (tictactoe(2,2) ==2) && (tictactoe(3,1) ==2)) || ((tictactoe(1,1) == 1)&& (tictactoe(1,2) == 1)&& (tictactoe(1,3) == 1)) || ((tictactoe(2,1) ==1) && (tictactoe(2,2) ==1) && (tictactoe(2,3) ==1)) || ((tictactoe(3,1)== 1) && (tictactoe(3,2)== 1)&& (tictactoe(3,3)== 1)) || ((tictactoe(1,1)== 1) && (tictactoe(2,1)== 1) && (tictactoe(3,1)== 1))|| ((tictactoe(1,2)== 1) && (tictactoe(2,2)== 1)&& (tictactoe(3,2)== 1)) || ((tictactoe(1,3) == 1) && (tictactoe(2,3)== 1) && (tictactoe(3,3)== 1)) || ((tictactoe(1,1) ==1) && (tictactoe(2,2) ==1) && (tictactoe(3,3)==1)) || ((tictactoe(1,3) ==1) && (tictactoe(2,2) ==1) && (tictactoe(3,1) ==1))
     fprintf('wahoo\n') %Is there a winner?
-    if((tictactoe(1,1) == 2)&& (tictactoe(1,2) == 2)&& (tictactoe(1,3) == 2)) || ((tictactoe(2,1) ==2) && (tictactoe(2,2) ==2) && (tictactoe(2,3) ==2)) || ((tictactoe(3,1)== 2) && (tictactoe(3,2)== 2) && (tictactoe(3,3)== 2)) || ((tictactoe(1,1)== 2) && (tictactoe(2,1)== 2) && (tictactoe(3,1)== 2)) || ((tictactoe(1,2)== 2) && (tictactoe(2,2)== 2) && (tictactoe(3,2)== 2)) || ((tictactoe(1,3) == 2) && (tictactoe(2,3)== 2) && (tictactoe(3,3)== 2)) || ((tictactoe(1,1) ==2) && (tictactoe(2,2) ==2) && (tictactoe(3,3)==2)) || ((tictactoe(1,3) ==2) && (tictactoe(2,2) ==2) && (tictactoe(3,1) ==2))
+    if((tictactoe(1,1) == 2)&& (tictactoe(1,2) == 2)&& (tictactoe(1,3) == 2)) || ((tictactoe(2,1) ==2) && (tictactoe(2,2) ==2) && (tictactoe(2,3) ==2)) || ((tictactoe(3,1)== 2) && (tictactoe(3,2)== 2)&& (tictactoe(3,3)== 2)) || ((tictactoe(1,1)== 2) && (tictactoe(2,1)== 2) && (tictactoe(3,1)== 2))|| ((tictactoe(1,2)== 2) && (tictactoe(2,2)== 2)&& (tictactoe(3,2)== 2)) || ((tictactoe(1,3) == 2) && (tictactoe(2,3)== 2) && (tictactoe(3,3)== 2)) || ((tictactoe(1,1) ==2) && (tictactoe(2,2) ==2) && (tictactoe(3,3)==2)) || ((tictactoe(1,3) ==2) && (tictactoe(2,2) ==2) && (tictactoe(3,1) ==2))
     fprintf(2, 'I felt bad that I was going to win, I did not want to hurt your poor human feelings. Rematch?') %If the human has won.
     end %if there is a winner and it is not the human, the computer will skip to the next turn
 elseif ((tictactoe(1,1) == 1) && (tictactoe(3,3) == 1) && (tictactoe(2,2)== 0)) || ((tictactoe(1,3)== 1) && (tictactoe(3,1) == 1) && (tictactoe(2,2) == 0))
@@ -277,7 +277,7 @@ else %there is no winner yet, the computer prompts the player to make their move
             tictactoe(row2,col2) = 2;
         end
     elseif (row2 > 3) || (row2 < 1) % If move is outside diminsions
-        c
+        fprintf(2, 'Homie, that is not between 1 and 3. I will give you another try, maybe you will get it right this time. \n')
         row4 = input('row?');
         col4 = input('column?');
         if isempty(row2) || isempty(col2)|| tictactoe(row2,col2) == 2 || tictactoe(row2,col2) == 1 || (row2 > 3) || (row2 < 1) || (col2 > 3) || (col2 < 1)

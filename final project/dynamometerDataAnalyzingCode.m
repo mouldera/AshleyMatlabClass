@@ -17,7 +17,7 @@
 
 %% Note: The code does not have a for Loop for seperating trials. Please
 %change the trial numbers in the isometricDataFunction,
-%isokineticDataFunctionTorques, and findIsokineticPositionTrials before
+%isokineticDataFunctionTorques, and isokineticDataFunctionPositions before
 %proceeding.
 
 
@@ -137,7 +137,7 @@ while dataImport == 1
         %Function creates column vectors of positions for each trial. Here
         %in case user would like to view or graph. This code does not use
         %these data.
-        [trial1IsokineticPositions, trial2IsokineticPositions, trial3IsokineticPositions, trial4IsokineticPositions, trial5IsokineticPositions, trial6IsokineticPositions, trial7IsokineticPositions  ] = findIsokineticPositionTrials( isokineticTime, isokineticPosition, isokineticTorque );
+        [trial1IsokineticPositions, trial2IsokineticPositions, trial3IsokineticPositions, trial4IsokineticPositions, trial5IsokineticPositions, trial6IsokineticPositions, trial7IsokineticPositions  ] = isokineticDataFunctionPositions( isokineticTime, isokineticPosition, isokineticTorque );
         
         %Creates column Vectors for max, average, and each trial torques.
         %The max value matrix and average value matrix are exported. The
